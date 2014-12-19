@@ -5,6 +5,13 @@ if [ `id -u` == 0 ]; then
   exit 1
 fi
 
+which -s tup
+
+if [ $? != 0 ]; then
+  echo "Error: building gtkkit requires the Tup build system, available at http://gittup.org/tup"
+  exit 1
+fi
+
 echo "Ensuring that gtkkit is built."
 
 if [ -e .tup ]; then
