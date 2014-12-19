@@ -21,7 +21,7 @@ else
 fi
 
 if [ $? != 0 ]; then
-  echo "Tup reports a build error."
+  echo "Error: Tup reports a build error."
   exit 1
 fi
 
@@ -29,7 +29,7 @@ echo "Rebuilding documentation."
 doxygen
 
 if [ $? != 0 ]; then
-  echo "Doxygen reports a documentation build error."
+  echo "Error: Doxygen reports a documentation build error."
   exit 1
 fi
 
