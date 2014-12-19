@@ -5,8 +5,16 @@ if [ `id -u` != 0 ]; then
   exit 1
 fi
 
+if [ ! -e GTKKit/libgtkkit.dylib ]; then
+  echo "Error: --PACKAGE-- is not built. Run tup as a normal user!"
+  exit 1
+fi
+
 install GTKKit/libgtkkit.dylib --PREFIX--/lib/libgtkkit.dylib
 mkdir --PREFIX--/share/doc/GTKKit
 mkdir --PREFIX--/include/GTKKit
+mkdir --PREFIX--/include/GTKKit/Protocols
 cp -R Documentation/* --PREFIX--/share/doc/GTKKit/
 cp GTKKit/*.h --PREFIX--/include/GTKKit/
+cp GTKKit/Protocols/*.h --PREFIX--/include/GTKKit/Protocols/
+cp GTKKit/libgtkkit.pc --PREFIX--/share/pkgconfig/
