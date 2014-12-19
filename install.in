@@ -1,10 +1,12 @@
 #!/bin/sh
 
-PREFIX="--PREFIX--"
-PACKAGE="--PACKAGE--"
-VERSION="--VERSION--"
-
-if [ `id -n` != 0 ]; then
+if [ `id -u` != 0 ]; then
   echo "Error: you must be root to install!"
   exit 1
 fi
+
+install GTKKit/libgtkkit.dylib --PREFIX--/lib/libgtkkit.dylib
+mkdir --PREFIX--/share/doc/GTKKit
+mkdir --PREFIX--/include/GTKKit
+cp -R Documentation/* --PREFIX--/share/doc/GTKKit/
+cp GTKKit/*.h --PREFIX--/include/GTKKit/

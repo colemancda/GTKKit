@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-PREFIX="--PREFIX--"
-PACKAGE="--PACKAGE--"
-VERSION="--VERSION--"
+if [ `id -u` != 0 ]; then
+  echo "Error: you must be root to install!"
+  exit 1
+fi
 
-echo "Uninstalling $PACKAGE-$VERSION."
+rm --PREFIX--/lib/libgtkkit.dylib
+rm -rf --PREFIX--/share/doc/GTKKit
+rm -rf --PREFIX--/include/GTKKit
