@@ -5,14 +5,22 @@ PACKAGE="--PACKAGE--"
 VERSION="--VERSION--"
 
 echo "Ensuring that $PACKAGE is built."
-tup
+
+if [ -e .tup ]; then
+  tup
+else
+  tup init && tup
+fi
+
+if [ $? != 0 ]; then
+  echo "Tup reports a build error."
+  exit 1
+fi
 
 echo "Building documentation."
 doxygen
 
-if [ $? == 0 ]; then
-  echo "Installing $PACKAGE-$VERSION."
-else
-  echo "Tup reports a build error."
+if [ $? != 0 ]; then
+  echo "Doxygen reports a build error."
   exit 1
 fi
