@@ -5,6 +5,11 @@ if [ `id -u` != 0 ]; then
   exit 1
 fi
 
+if [ ! -e .tup ]; then
+  echo "Error: @PACKAGE@ build system not initialized. Run \"tup init\" as a normal user!"
+  exit 1
+fi
+
 if [ ! -e GTKKit/libgtkkit.dylib ]; then
   echo "Error: @PACKAGE@ is not built. Run tup as a normal user!"
   exit 1

@@ -5,6 +5,7 @@ if [ `id -u` != 0 ]; then
   exit 1
 fi
 
-rm @PREFIX@/lib/libgtkkit.dylib
+rm -f @PREFIX@/lib/libgtkkit.dylib
 rm -rf @PREFIX@/share/doc/GTKKit
 rm -rf @PREFIX@/include/GTKKit
+rm -f @PREFIX@/share/pkgconfig/libgtkkit.pc
