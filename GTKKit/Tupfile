@@ -9,7 +9,7 @@ LDFLAGS += -current_version @(VERSION_MAJOR).@(VERSION_MINOR).@(VERSION_MICRO)
 LDFLAGS += -compatibility_version @(VERSION_MAJOR).@(VERSION_MINOR).0
 
 : GTKEnumerations.d/*.h |> cat %f > %o |> GTKEnumerations.h {hdr}
-: GTKEnumerations.d/*.m |> echo "#import <GTKKit/GTKEnumerations.h>" > %o && cat %f >> %o |> GTKEnumerations.m {src}
+: GTKEnumerations.d/GTKEnumerations.m.in GTKEnumerations.d/*.m |> cat %f > %o |> GTKEnumerations.m {src}
 : *.m |> |> {src}
 
 : foreach {src} | {hdr} |> !compile |> %B.o {obj}

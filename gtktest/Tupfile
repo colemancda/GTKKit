@@ -1,8 +1,0 @@
-include_rules
-
-CFLAGS += -I../
-
-LDFLAGS += -L../GTKKit -lgtkkit
-
-: gtktest.m |> !compile |> %B.o
-: gtktest.o | ../GTKKit/libgtkkit.dylib |> !link |> gtktest
