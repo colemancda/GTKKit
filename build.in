@@ -1,15 +1,11 @@
 #!/bin/bash
 
-PREFIX="--PREFIX--"
-PACKAGE="--PACKAGE--"
-VERSION="--VERSION--"
-
 if [ `id -u` == 0 ]; then
   echo "Error: you must not be root to build @PACKAGE@!"
   exit 1
 fi
 
-echo "Ensuring that $PACKAGE is built."
+echo "Ensuring that @PACKAGE@ is built."
 
 if [ -e .tup ]; then
   tup

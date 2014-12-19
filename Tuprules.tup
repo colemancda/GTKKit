@@ -13,4 +13,3 @@ LDFLAGS += `pkg-config --libs gtk+-3.0`
 
 !compile = |> $(CC) -c $(CFLAGS) %f -o %o |> %B.o
 !link = |> $(CC) $(CFLAGS) $(LDFLAGS) %f -o %o |>
-!template = |> tup varsed %f %o |>

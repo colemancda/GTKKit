@@ -16,4 +16,4 @@ LDFLAGS += -compatibility_version @(VERSION_MAJOR).@(VERSION_MINOR).0
 
 : {obj} |> !link |> libgtkkit.dylib
 
-: libgtkkit.pc.in |> !template |> libgtkkit.pc
+: libgtkkit.pc.in |> tup varsed %f %o |> libgtkkit.pc
