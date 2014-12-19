@@ -1,0 +1,22 @@
+include_rules
+
+CFLAGS  += -I../
+CFLAGS  += -Isystem../
+
+LDFLAGS += -dynamiclib
+LDFLAGS += -install_name $(PREFIX)/lib/libgtkkit.dylib
+LDFLAGS += -current_version $(CURRENT_VERSION)
+LDFLAGS += -compatibility_version $(COMPAT_VERSION)
+
+: GTKEnumerations.d/*.h |> cat %f > %o |> GTKEnumerations.h {hdr}
+: GTKEnumerations.d/*.m |> echo "#import <GTKKit/GTKEnumerations.h>" > %o && cat %f >> %o |> GTKEnumerations.m {src}
+: *.m |> |> {src}
+
+: foreach {src} | {hdr} |> !compile |> %B.o {obj}
+
+: {obj} | ../config |> !link |> libgtkkit.dylib
+
+TEMPLATE += -e "s:--PREFIX--:$(PREFIX):g"
+TEMPLATE += -e "s:--VERSION--:$(CURRENT_VERSION):g"
+
+: libgtkkit.pc.in |> < %f sed $(TEMPLATE) > %o |> libgtkkit.pc

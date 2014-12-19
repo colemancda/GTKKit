@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PREFIX="--PREFIX--"
+PACKAGE="--PACKAGE--"
+VERSION="--VERSION--"
+
+echo "Ensuring that $PACKAGE is built."
+tup
+
+if [ $? == 0 ]; then
+  echo "Installing $PACKAGE-$VERSION."
+else
+  echo "Tup reports a build error."
+  exit 1
+fi

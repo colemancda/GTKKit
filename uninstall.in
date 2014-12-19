@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PREFIX="--PREFIX--"
+PACKAGE="--PACKAGE--"
+VERSION="--VERSION--"
+
+echo "Uninstalling $PACKAGE-$VERSION."
