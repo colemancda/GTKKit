@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PREFIX="--PREFIX--"
+PACKAGE="--PACKAGE--"
+VERSION="--VERSION--"
+
+if [ `id -n` != 0 ]; then
+  echo "Error: you must be root to install!"
+  exit 1
+fi
