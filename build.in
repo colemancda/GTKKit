@@ -21,6 +21,7 @@ echo "Building documentation."
 doxygen
 
 if [ $? != 0 ]; then
-  echo "Doxygen reports a build error."
+  echo "Doxygen reports a documentation build error."
   exit 1
 fi
+
