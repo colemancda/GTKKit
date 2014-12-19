@@ -10,7 +10,7 @@ if [ ! -e GTKKit/libgtkkit.dylib ]; then
   exit 1
 fi
 
-install GTKKit/libgtkkit.dylib --PREFIX--/lib/libgtkkit.dylib
+install GTKKit/libgtkkit.dylib @PREFIX@/lib/libgtkkit.dylib
 mkdir @PREFIX@/share/doc/GTKKit
 mkdir @PREFIX@/include/GTKKit
 mkdir @PREFIX@/include/GTKKit/Protocols
