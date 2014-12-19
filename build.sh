@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ `id -u` == 0 ]; then
-  echo "Error: you must not be root to build @PACKAGE@!"
+  echo "Error: you must not be root to build gtkkit!"
   exit 1
 fi
 
-echo "Ensuring that @PACKAGE@ is built."
+echo "Ensuring that gtkkit is built."
 
 if [ -e .tup ]; then
   tup
@@ -26,3 +26,4 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
+echo "You may now run ./install.sh as root to install gtkkit."
