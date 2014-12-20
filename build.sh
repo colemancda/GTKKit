@@ -26,6 +26,7 @@ if [ $? != 0 ]; then
 fi
 
 echo "Rebuilding documentation."
+rm -rf Documentation
 doxygen
 
 if [ $? != 0 ]; then
