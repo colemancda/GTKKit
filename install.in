@@ -15,12 +15,10 @@ if [ ! -e GTKKit/libgtkkit.dylib ]; then
   exit 1
 fi
 
-./uninstall.sh
-
 install GTKKit/libgtkkit.dylib @PREFIX@/lib/libgtkkit.dylib
-mkdir @PREFIX@/share/doc/GTKKit
-mkdir @PREFIX@/include/GTKKit
-mkdir @PREFIX@/include/GTKKit/Protocols
+mkdir -p @PREFIX@/share/doc/GTKKit
+mkdir -p @PREFIX@/include/GTKKit
+mkdir -p @PREFIX@/include/GTKKit/Protocols
 cp -R Documentation/* @PREFIX@/share/doc/GTKKit/
 cp GTKKit/*.h @PREFIX@/include/GTKKit/
 cp GTKKit/Protocols/*.h @PREFIX@/include/GTKKit/Protocols/
