@@ -4,7 +4,7 @@
  includedir=${exec_prefix}/include/GTKKit/
  
  Name: libgtkkit
- Description: Library for making GTK+ graphical interfaces in Objective-C
+ Description: Wrapper library for making GTK+ graphical interfaces in Objective-C
  Version: @VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_MICRO@
  Libs: -L${libdir} -lgtkkit
  Cflags: -I${includedir}
