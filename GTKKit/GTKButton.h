@@ -14,7 +14,7 @@
 
 - (GTKCallback)clickedCallback;
 
-- (id)delegate:(id<GTKButtonDelegate>)delegate;
+- (id)delegate:(id<GTKButtonDelegate>)d;
 
 - (void)handleDelegate;
 

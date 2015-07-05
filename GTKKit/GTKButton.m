@@ -1,6 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
 #import <GTKKit/GTKButton.h>
+#import <GTKKit/GTKButtonDelegate.h>
 
 @implementation GTKButton
 
@@ -27,6 +28,7 @@
 
 - (id)delegate:(id<GTKButtonDelegate>)d {
 	delegate = d;
+	return self;
 }
 
 - (void)handleDelegate {
