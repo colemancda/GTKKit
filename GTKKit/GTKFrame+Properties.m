@@ -14,7 +14,7 @@
 }
 
 - (GTKWidget *)labelWidget {
-	return [GTKWidget newFromGtkWidget: gtk_frame_get_label_widget (GTK_FRAME (widget))];
+	return [GTKWidget widgetFromGtkWidget: gtk_frame_get_label_widget (GTK_FRAME (widget))];
 }
 
 - (id)labelWidget:(GTKWidget *)labelWidget {
