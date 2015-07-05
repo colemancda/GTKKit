@@ -14,6 +14,10 @@
 
 - (GTKCallback)clickedCallback;
 
+- (id)delegate:(id<GTKButtonDelegate>)delegate;
+
+- (void)handleDelegate;
+
 @end
 
 static void buttonClicked(GtkWidget *button, GTKButton *sender);

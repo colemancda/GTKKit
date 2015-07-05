@@ -25,9 +25,20 @@
 	return clickedCallback;
 }
 
+- (id)delegate:(id<GTKButtonDelegate>)d {
+	delegate = d;
+}
+
+- (void)handleDelegate {
+	if (delegate != NULL) {
+		[delegate buttonClicked];
+	}
+}
+
 @end
 
 static void buttonClicked(GtkWidget *button, GTKButton *sender) {
-	GTKCallback callback = [sender clickedCallback];
-	callback(sender);
+	[sender handleDelegate];
+	GTKCallback callbackBlock = [sender clickedCallback];
+	callbackBlock(sender);
 }
