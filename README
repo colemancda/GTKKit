@@ -3,3 +3,9 @@ GTK+ user interface toolkit (among other related libraries) available to the
 Objective-C programmer in a useful, simplified manner. It reduces the amount
 of code a programmer needs to write compared to plain C, while maintaining
 full compatibility with all existing C code.
+
+Requirements: 
+ - GTK+ 3
+ - ObjFW
+ - Doxygen
+ - Tup
