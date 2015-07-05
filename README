@@ -8,6 +8,11 @@ usable, extremely skeletal state.
 
 Requirements: 
  - GTK+ 3
- - ObjFW
+ - ObjFW (https://webkeks.org/objfw/)
  - Doxygen
- - Tup
+ - Tup (http://gittup.org/tup/)
+
+If all the requirements are installed, just run build.sh as
+a normal user and install.sh as root to install.
+
+At the moment, GTKKit is only tested on OS X.
