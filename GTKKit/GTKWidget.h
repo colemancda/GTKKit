@@ -26,7 +26,7 @@
  * @param w the GtkWidget to wrap in a widget instance.
  * @returns an initialized widget object.
  */
-+ (id)newFromGtkWidget:(GtkWidget *)w;
++ (id)widgetFromGtkWidget:(GtkWidget *)w;
 
 - (id)init;
 

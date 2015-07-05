@@ -9,7 +9,7 @@
 	return [[self alloc] init];
 }
 
-+ (id)newFromGtkWidget:(GtkWidget *)w {
++ (id)widgetFromGtkWidget:(GtkWidget *)w {
 	GTKWidget *newWidget = [self new];
 	[newWidget widget: w];
 	return newWidget;
