@@ -3,7 +3,8 @@ which makes the GTK+ user interface toolkit available to the
 Objective-C programmer in a useful, simplified manner. It
 reduces the amount of code a programmer needs to write
 compared to plain C, while maintaining full compatibility
-with all existing C code.
+with all existing C code. It is currently in a barely
+usable, extremely skeletal state.
 
 Requirements: 
  - GTK+ 3
