@@ -2,11 +2,12 @@
 #import <gtk/gtk.h>
 #import <GTKKit/GTKBin.h>
 #import <GTKKit/typedefs.h>
+#import <GTKKit/GTKButtonDelegate.h>
 
 @interface GTKButton : GTKBin {
 
 	GTKCallback clickedCallback;
-	
+	id<GTKButtonDelegate> delegate;
 }
 
 - (id)onClick:(GTKCallback)callback;
