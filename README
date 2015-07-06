@@ -16,3 +16,7 @@ If all the requirements are installed, just run build.sh as
 a normal user and install.sh as root to install.
 
 At the moment, GTKKit is only tested on OS X.
+
+By default, GTKKit installs in /opt/local. To change that,
+set the CONFIG_PREFIX variable in the tup.config file in
+the project root directory.
