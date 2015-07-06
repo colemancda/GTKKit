@@ -9,8 +9,6 @@
 @property (nullable, assign, getter=clickedCallback, setter=onClick:) GTKCallback clickedCallback;
 @property (nullable, weak) id<GTKButtonDelegate> delegate;
 
-- (void)handleDelegate;
-
 @end
 
 static void buttonClicked(GtkWidget OF_NONNULL *button, GTKButton OF_NONNULL *sender);

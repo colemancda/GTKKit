@@ -17,12 +17,6 @@
 	return self;
 }
 
-- (void)handleDelegate {
-	if (self.delegate != NULL) {
-		[self.delegate buttonClicked];
-	}
-}
-
 @end
 
 static void buttonClicked(GtkWidget *button, GTKButton *sender) {
