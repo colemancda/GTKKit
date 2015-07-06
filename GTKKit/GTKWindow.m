@@ -5,7 +5,7 @@
 @implementation GTKWindow
 
 - (id)createWidget {
-	widget = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	self.widget = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	return self;
 }
 

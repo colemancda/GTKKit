@@ -6,13 +6,13 @@
 @implementation GTKButton
 
 - (id)createWidget {
-	widget = gtk_button_new ();
+	self.widget = gtk_button_new ();
 	return self;
 }
 
 - (id)init {
 	self = [super init];
-	g_signal_connect(GTK_WIDGET (widget), "clicked", G_CALLBACK (buttonClicked), (__bridge void*) self);
+	g_signal_connect(GTK_WIDGET (self.widget), "clicked", G_CALLBACK (buttonClicked), (__bridge void*) self);
 	clickedCallback = ^ {};
 	return self;
 }

@@ -5,12 +5,12 @@
 @implementation GTKContainer (Actions)
 
 - (id)addWidget:(GTKWidget *)childWidget {
-	gtk_container_add (GTK_CONTAINER (widget), [childWidget widget]);
+	gtk_container_add (GTK_CONTAINER (self.widget), [childWidget widget]);
 	return self;
 }
 
 - (id)removeWidget:(GTKWidget *)childWidget {
-	gtk_container_remove (GTK_CONTAINER (widget), [childWidget widget]);
+	gtk_container_remove (GTK_CONTAINER (self.widget), [childWidget widget]);
 	return self;
 }
 

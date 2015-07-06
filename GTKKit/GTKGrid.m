@@ -5,7 +5,7 @@
 @implementation GTKGrid
 
 - (id)createWidget {
-	widget = gtk_grid_new();
+	self.widget = gtk_grid_new();
 	return self;
 }
 

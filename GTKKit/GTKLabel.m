@@ -5,7 +5,7 @@
 @implementation GTKLabel
 
 - (id)createWidget {
-	widget = gtk_label_new(NULL);
+	self.widget = gtk_label_new(NULL);
 	return self;
 }
 

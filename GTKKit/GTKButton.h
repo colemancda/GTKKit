@@ -7,17 +7,17 @@
 @interface GTKButton : GTKBin {
 
 	GTKCallback clickedCallback;
-	id<GTKButtonDelegate> delegate;
+	id<GTKButtonDelegate> OF_NULLABLE delegate;
 }
 
-- (id)onClick:(GTKCallback)callback;
+- (id OF_NONNULL)onClick:(GTKCallback OF_NULLABLE)callback;
 
-- (GTKCallback)clickedCallback;
+- (GTKCallback OF_NONNULL)clickedCallback;
 
-- (id)delegate:(id<GTKButtonDelegate>)d;
+- (id OF_NONNULL)delegate:(id<GTKButtonDelegate> OF_NULLABLE)d;
 
 - (void)handleDelegate;
 
 @end
 
-static void buttonClicked(GtkWidget *button, GTKButton *sender);
+static void buttonClicked(GtkWidget OF_NONNULL *button, GTKButton OF_NONNULL *sender);

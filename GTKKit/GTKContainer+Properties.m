@@ -5,12 +5,12 @@
 @implementation GTKContainer (Properties)
 
 - (id)borderWidth:(unsigned int)borderWidth {
-	gtk_container_set_border_width (GTK_CONTAINER (widget), borderWidth);
+	gtk_container_set_border_width (GTK_CONTAINER (self.widget), borderWidth);
 	return self;
 }
 
 - (unsigned int)borderWidth {
-	return gtk_container_get_border_width (GTK_CONTAINER (widget));
+	return gtk_container_get_border_width (GTK_CONTAINER (self.widget));
 }
 
 @end

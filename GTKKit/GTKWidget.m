@@ -19,31 +19,13 @@
 	self = [super init];
 	if (self) {
 		[self createWidget];
-		g_signal_connect(GTK_WIDGET (widget), "destroy", G_CALLBACK (widgetDestroyed), (__bridge void*) self);
-		destroyedCallback = ^{};
+		g_signal_connect(GTK_WIDGET (self.widget), "destroy", G_CALLBACK (widgetDestroyed), (__bridge void*) self);
+		[self onDestroy: ^{}];
 	}
 	return self;
 }
 
 - (id)createWidget {
-	return self;
-}
-
-- (GtkWidget *)widget {
-	return GTK_WIDGET (widget);
-}
-
-- (id)widget:(GtkWidget *)w {
-	widget = w;
-	return self;
-}
-
-- (GTKCallback)destroyedCallback {
-	return destroyedCallback;
-}
- 
-- (id)onDestroy:(GTKCallback) callbackBlock {
-	destroyedCallback = callbackBlock;
 	return self;
 }
 
