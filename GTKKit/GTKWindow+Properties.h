@@ -8,8 +8,6 @@
 @property (nonnull, copy) OFString *title;
 @property (assign) bool resizable;
 
-- (id)defaultWidth:(int)width height:(int)height;
-
 - (id)width:(int)width height:(int)height;
 
 - (bool)modal;

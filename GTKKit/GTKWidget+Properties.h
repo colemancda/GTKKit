@@ -4,8 +4,6 @@
 
 @interface GTKWidget (Properties)
 
-- (id)requestWidth:(int)width height:(int)height;
-
 - (id)name:(NSString *)name;
 
 - (NSString *)name;

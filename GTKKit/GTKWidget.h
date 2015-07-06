@@ -13,8 +13,6 @@
 @property (nonnull, assign, getter=widget, setter=widget:) GtkWidget *widget;
 @property (nullable, assign, getter=destroyedCallback, setter=onDestroy:) GTKCallback destroyedCallback;
 
-@property (assign) of_dimension_t defaultSize;
-
 /**
  * Create a new widget.
  *

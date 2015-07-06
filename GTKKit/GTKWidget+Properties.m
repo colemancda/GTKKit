@@ -5,11 +5,6 @@
 
 @implementation GTKWidget (Properties)
 
-- (id)requestWidth:(int)width height:(int)height {
-	gtk_widget_set_size_request (GTK_WIDGET (self.widget), width, height);
-	return self;
-}
-
 - (id)name:(NSString *)name {
 	gtk_widget_set_name(GTK_WIDGET (self.widget), [name UTF8String]);
 	return self;

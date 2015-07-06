@@ -3,9 +3,7 @@
 #import <GTKKit/GTKWidget.h>
 #import <GTKKit/typedefs.h>
 
-@implementation GTKWidget {
-	of_dimension_t _defaultSize;
-}
+@implementation GTKWidget
 
 + (id)new {
 	return [[self alloc] init];
@@ -29,14 +27,6 @@
 
 - (id)createWidget {
 	return self;
-}
-
-- (of_dimension_t)defaultSize {
-	return _defaultSize;
-}
-
-- (void)setDefaultSize:(of_dimension_t)size {
-	gtk_window_set_default_size (GTK_WINDOW (self.widget), (int) size.width, (int) size.height);
 }
 
 @end

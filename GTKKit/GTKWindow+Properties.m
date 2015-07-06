@@ -24,11 +24,6 @@
 	return gtk_window_get_resizable (GTK_WINDOW (self.widget));
 }
 
-- (id)defaultWidth:(int)width height:(int)height {
-	gtk_window_set_default_size (GTK_WINDOW (self.widget), width, height);
-	return self;
-}
-
 - (id)width:(int)width height:(int)height {
 	gtk_window_resize (GTK_WINDOW (self.widget), width, height);
 	return self;
