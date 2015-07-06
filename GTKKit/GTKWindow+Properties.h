@@ -5,13 +5,8 @@
 
 @interface GTKWindow (Properties)
 
-- (id)title:(id)title;
-
-- (id)title;
-
-- (id)resizable:(bool)resizable;
-
-- (bool)resizable;
+@property (nonnull, copy) OFString *title;
+@property (assign) bool resizable;
 
 - (id)defaultWidth:(int)width height:(int)height;
 

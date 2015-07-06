@@ -6,20 +6,18 @@
 
 @implementation GTKWindow (Properties)
 
-- (id)title:(id)title {
+- (void)setTitle:(OFString * OF_NONNULL)title {
 	const char * newTitle = [title UTF8String];
 	gtk_window_set_title(GTK_WINDOW (self.widget), newTitle);
-	return self;
 }
 
-- (id)title {
+- (OFString * OF_NONNULL)title {
 	const char *title = gtk_window_get_title (GTK_WINDOW (self.widget));
-	return [NSString stringWithUTF8String: title];
+	return [OFString stringWithUTF8String: title];
 }
 
-- (id)resizable:(bool)resizable {
+- (void)setResizable:(bool)resizable {
 	gtk_window_set_resizable (GTK_WINDOW (self.widget), resizable);
-	return self;
 }
 
 - (bool)resizable {
