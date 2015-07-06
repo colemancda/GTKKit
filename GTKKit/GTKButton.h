@@ -6,8 +6,8 @@
 
 @interface GTKButton : GTKBin
 
-@property (nullable, assign, getter=clickedCallback, setter=onClick:) GTKCallback clickedCallback;
-@property (nullable, weak) id<GTKButtonDelegate> delegate;
+@property (nonnull, copy, getter=clickedCallback, setter=onClick:) GTKCallback clickedCallback;
+@property (nullable) id<GTKButtonDelegate> delegate;
 
 @end
 
