@@ -25,13 +25,4 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-echo "Rebuilding documentation."
-rm -rf Documentation
-doxygen
-
-if [ $? != 0 ]; then
-  echo "Error: Doxygen reports a documentation build error."
-  exit 1
-fi
-
 echo "You may now run ./install.sh as root to install gtkkit."

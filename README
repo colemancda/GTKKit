@@ -9,7 +9,6 @@ usable, extremely skeletal state.
 Requirements: 
  - GTK+ 3
  - ObjFW (https://webkeks.org/objfw/)
- - Doxygen
  - Tup (http://gittup.org/tup/)
 
 If all the requirements are installed, just run build.sh as
