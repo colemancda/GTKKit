@@ -4,17 +4,10 @@
 #import <GTKKit/typedefs.h>
 #import <GTKKit/GTKButtonDelegate.h>
 
-@interface GTKButton : GTKBin {
+@interface GTKButton : GTKBin
 
-	GTKCallback clickedCallback;
-	id<GTKButtonDelegate> OF_NULLABLE delegate;
-}
-
-- (id OF_NONNULL)onClick:(GTKCallback OF_NULLABLE)callback;
-
-- (GTKCallback OF_NONNULL)clickedCallback;
-
-- (id OF_NONNULL)delegate:(id<GTKButtonDelegate> OF_NULLABLE)d;
+@property (nullable, assign, getter=clickedCallback, setter=onClick:) GTKCallback clickedCallback;
+@property (nullable, weak) id<GTKButtonDelegate> delegate;
 
 - (void)handleDelegate;
 
