@@ -15,12 +15,11 @@
   return [NSString stringWithUTF8String: gtk_entry_get_text (GTK_ENTRY (self.widget))];
 }
 
-- (id)stringValue:(id)text {
+- (void)setStringValue:(id)text {
   @autoreleasepool {
     const char *newStringValue = [text UTF8String];
     gtk_entry_set_text (GTK_ENTRY (self.widget), newStringValue);
   }
-  return self;
 }
 
 - (id)textVisible:(BOOL)visible {

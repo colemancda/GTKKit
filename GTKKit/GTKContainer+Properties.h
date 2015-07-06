@@ -4,8 +4,10 @@
 
 @interface GTKContainer (Properties)
 
-- (id)borderWidth:(unsigned int)borderWidth;
+@property (assign) unsigned int borderWidth;
 
-- (unsigned int)borderWidth;
+//- (id)borderWidth:(unsigned int)borderWidth;
+
+//- (unsigned int)borderWidth;
 
 @end

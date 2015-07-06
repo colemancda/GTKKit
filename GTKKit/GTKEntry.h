@@ -6,7 +6,9 @@
   GtkEntryBuffer *buffer;
 }
 
-- (id)stringValue;
+@property (assign) id stringValue;
+
+// - (id)stringValue;
 
 - (id)textVisible:(BOOL)visible;
 

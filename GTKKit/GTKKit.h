@@ -17,8 +17,8 @@
 #import <GTKKit/GTKBin.h>
 #import <GTKKit/GTKButton.h>
 #import <GTKKit/GTKButton+Properties.h>
-#import <GTKKit/GTKButtonDelegate.h>
 #import <GTKKit/GTKWindow.h>
 #import <GTKKit/GTKWindow+Actions.h>
 #import <GTKKit/GTKWindow+Properties.h>
 #import <GTKKit/GTKEntry.h>
+#import <GTKKit/Protocols/GTKButtonDelegate.h>

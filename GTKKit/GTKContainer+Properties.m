@@ -4,9 +4,8 @@
 
 @implementation GTKContainer (Properties)
 
-- (id)borderWidth:(unsigned int)borderWidth {
+- (void)setBorderWidth:(unsigned int)borderWidth {
 	gtk_container_set_border_width (GTK_CONTAINER (self.widget), borderWidth);
-	return self;
 }
 
 - (unsigned int)borderWidth {
