@@ -19,9 +19,8 @@
 @end
 
 static void buttonClicked(GtkWidget *button, GTKButton *sender) {
-	if (sender.delegate != NULL) {
+	if (sender.delegate)
 		[sender.delegate buttonClicked: sender];
-	}
 	[sender onClick](sender);
 
 }
