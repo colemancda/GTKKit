@@ -5,9 +5,6 @@
 @interface GTKButton (Properties)
 
 @property (assign) OFString *label;
-
-- (id)reliefStyle:(GtkReliefStyle)relief;
-
-- (GtkReliefStyle)reliefStyle;
+@property (assign) GtkReliefStyle reliefStyle;
 
 @end

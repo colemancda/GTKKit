@@ -5,20 +5,9 @@
 
 @interface GTKFrame (Properties)
 
-- (OFString *)label;
-
-- (id)label:(OFString *)label;
-
-- (GTKWidget *)labelWidget;
-
-- (id)labelWidget:(GTKWidget *)label;
-
-- (id)xAlign:(float)xAlign;
-
-- (float)xAlign;
-
-- (id)yAlign:(float)yAlign;
-
-- (float)yAlign;
+@property (assign) OFString *label;
+@property (strong) GTKWidget *labelWidget;
+@property (assign) float xAlign;
+@property (assign) float yAlign;
 
 @end

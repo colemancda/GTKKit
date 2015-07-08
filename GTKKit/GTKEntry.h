@@ -3,19 +3,13 @@
 #import <GTKKit/GTKWidget.h>
 
 @interface GTKEntry : GTKWidget {
-  GtkEntryBuffer *buffer;
+  
 }
 
+@property (assign) GtkEntryBuffer *buffer;
 @property (assign) id stringValue;
-@property (assign) BOOL textVisible;
+@property (assign) bool textVisible;
 @property (assign) int maximumLength;
-
-// - (id)maximumLength:(int)max;
-
-// - (int)maximumLength;
-
-- (BOOL)hasFrame;
-
-- (id)hasFrame:(BOOL)setting;
+@property (assign) bool hasFrame;
 
 @end

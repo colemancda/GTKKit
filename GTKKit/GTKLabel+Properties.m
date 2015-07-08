@@ -8,9 +8,8 @@
 	return [NSString stringWithUTF8String: gtk_label_get_text (GTK_LABEL (self.widget))];
 }
 
-- (id)label:(NSString *)label {
+- (void)setLabel:(NSString *)label {
 	gtk_label_set_text (GTK_LABEL (self.widget), [label UTF8String]);
-	return self;
 }
 
 - (float)xAlign {
@@ -25,19 +24,16 @@
 	return y;
 }
 
-- (id)xAlign:(float)xAlign {
+- (void)setXAlign:(float)xAlign {
 	g_object_set (G_OBJECT (self.widget), "xalign", xAlign, NULL);
-	return self;
 }
 
-- (id)yAlign:(float)yAlign {
+- (void)setYAlign:(float)yAlign {
 	g_object_set (G_OBJECT (self.widget), "yalign", yAlign, NULL);
-	return self;
 }
 
-- (id)justify:(GtkJustification)jtype {
+- (void)setJustify:(GtkJustification)jtype {
 	gtk_label_set_justify (GTK_LABEL (self.widget), jtype);
-	return self;
 }
 
 - (GtkJustification)justify {
@@ -48,32 +44,28 @@
 	return gtk_label_get_ellipsize (GTK_LABEL (self.widget));
 }
 
-- (id)ellipsizeMode:(PangoEllipsizeMode)mode {
+- (void)setEllipsizeMode:(PangoEllipsizeMode)mode {
 	gtk_label_set_ellipsize (GTK_LABEL (self.widget), mode);
-	return self;
 }
 
 - (int)desiredWidthInCharacters {
 	return gtk_label_get_width_chars (GTK_LABEL (self.widget));
 }
 
-- (id)desiredWithdInCharacters:(int)width {
+- (void)setDesiredWidthInCharacters:(int)width {
 	gtk_label_set_width_chars (GTK_LABEL (self.widget), width);
-	return self;
 }
 
-- (id)wrap:(bool)wrap {
+- (void)setWrap:(bool)wrap {
 	gtk_label_set_line_wrap (GTK_LABEL (self.widget), wrap);
-	return self;
 }
 
 - (bool)wrap {
 	return gtk_label_get_line_wrap (GTK_LABEL (self.widget));
 }
 
-- (id)lineWrapMode:(PangoWrapMode)mode {
+- (void)setLineWrapMode:(PangoWrapMode)mode {
 	gtk_label_set_line_wrap_mode (GTK_LABEL (self.widget), mode);
-	return self;
 }
 
 - (PangoWrapMode)lineWrapMode {
@@ -84,27 +76,24 @@
 	return gtk_label_get_selectable (GTK_LABEL (self.widget));
 }
 
-- (id)selectable:(bool)setting {
+- (void)setSelectable:(bool)setting {
 	gtk_label_set_selectable (GTK_LABEL (self.widget), setting);
-	return self;
 }
 
 - (bool)singleLineMode {
 	return gtk_label_get_single_line_mode (GTK_LABEL (self.widget));
 }
 
-- (id)singleLineMode:(bool)setting {
+- (void)setSingleLineMode:(bool)setting {
 	gtk_label_set_single_line_mode (GTK_LABEL (self.widget), setting);
-	return self;
 }
 
 - (double)angle {
 	return gtk_label_get_angle (GTK_LABEL (self.widget));
 }
 
-- (id)angle:(double)angle {
+- (void)setAngle:(double)angle {
 	gtk_label_set_angle (GTK_LABEL (self.widget), angle);
-	return self;
 }
 
 @end

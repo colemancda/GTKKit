@@ -6,8 +6,4 @@
 
 @property (assign) unsigned int borderWidth;
 
-//- (id)borderWidth:(unsigned int)borderWidth;
-
-//- (unsigned int)borderWidth;
-
 @end

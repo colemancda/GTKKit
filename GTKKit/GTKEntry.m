@@ -6,8 +6,8 @@
 
 - (id)createWidget {
   self.widget = gtk_entry_new();
-  buffer = gtk_entry_buffer_new(NULL, -1);
-  gtk_entry_set_buffer (GTK_ENTRY (self.widget), buffer);
+  self.buffer = gtk_entry_buffer_new(NULL, -1);
+  gtk_entry_set_buffer (GTK_ENTRY (self.widget), self.buffer);
 	return self;
 }
 
@@ -22,11 +22,11 @@
   }
 }
 
-- (void)setTextVisible:(BOOL)visible {
+- (void)setTextVisible:(bool)visible {
   gtk_entry_set_visibility (GTK_ENTRY (self.widget), visible);
 }
 
-- (BOOL)textVisible {
+- (bool)textVisible {
   return gtk_entry_get_visibility (GTK_ENTRY (self.widget));
 }
 
@@ -38,13 +38,12 @@
   return gtk_entry_get_max_length (GTK_ENTRY (self.widget));
 }
 
-- (BOOL)hasFrame {
+- (bool)hasFrame {
   return gtk_entry_get_has_frame (GTK_ENTRY (self.widget));
 }
 
-- (id)hasFrame:(BOOL)setting {
+- (void)setHasFrame:(bool)setting {
   gtk_entry_set_has_frame (GTK_ENTRY (self.widget), setting);
-  return self;
 }
 
 @end

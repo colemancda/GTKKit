@@ -8,23 +8,20 @@
 	return [NSString stringWithUTF8String: gtk_frame_get_label (GTK_FRAME (self.widget))];
 }
 
-- (id)label:(OFString *)label {
+- (void)setLabel:(OFString *)label {
 	gtk_frame_set_label (GTK_FRAME (self.widget), [label UTF8String]);
-	return self;
 }
 
 - (GTKWidget *)labelWidget {
 	return [GTKWidget widgetFromGtkWidget: gtk_frame_get_label_widget (GTK_FRAME (self.widget))];
 }
 
-- (id)labelWidget:(GTKWidget *)labelWidget {
+- (void)setLabelWidget:(GTKWidget *)labelWidget {
 	gtk_frame_set_label_widget (GTK_FRAME (self.widget), [labelWidget widget]);
-	return self;
 }
 
-- (id)xAlign:(float)xAlign {
-	g_object_set (G_OBJECT (self.widget), "label-xalign", xAlign, NULL); 
-	return self;
+- (void)setXAlign:(float)xAlign {
+	g_object_set (G_OBJECT (self.widget), "label-xalign", xAlign, NULL);
 }
 
 - (float)xAlign {
@@ -33,9 +30,8 @@
 	return x;
 }
 
-- (id)yAlign:(float)yAlign {
+- (void)setYAlign:(float)yAlign {
 	g_object_set (G_OBJECT (self.widget), "label-yalign", yAlign, NULL); 
-	return self;
 }
 
 - (float)yAlign {

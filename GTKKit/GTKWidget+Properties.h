@@ -4,20 +4,10 @@
 
 @interface GTKWidget (Properties)
 
-- (id)name:(NSString *)name;
-
-- (NSString *)name;
-
-- (bool)isFocus;
-
-- (id)sensitive:(bool)sensitive;
-
-- (bool)sensitive;
-
-- (bool)effectiveSensitivity;
-
-- (double)opacity;
-
-- (id)opacity:(double)opacity;
+@property (assign) OFString *name;
+@property (assign) bool sensitive;
+@property (readonly) bool effectiveSensitivity;
+@property (assign) double opacity;
+@property (readonly) bool isFocus;
 
 @end

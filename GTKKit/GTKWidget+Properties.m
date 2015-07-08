@@ -5,12 +5,11 @@
 
 @implementation GTKWidget (Properties)
 
-- (id)name:(NSString *)name {
+- (void)setName:(NSString *)name {
 	gtk_widget_set_name(GTK_WIDGET (self.widget), [name UTF8String]);
-	return self;
 }
 
-- (NSString *)name {
+- (OFString *)name {
 	const char* widgetName = gtk_widget_get_name(GTK_WIDGET (self.widget));
 	return [NSString stringWithUTF8String: widgetName];
 }
@@ -19,9 +18,8 @@
 	return gtk_widget_is_focus (GTK_WIDGET (self.widget));
 }
 
-- (id)sensitive:(bool)sensitive {
+- (void)setSensitive:(bool)sensitive {
 	gtk_widget_set_sensitive (GTK_WIDGET (self.widget), sensitive);
-	return self;
 }
 
 - (bool)sensitive {
@@ -36,9 +34,8 @@
 	return gtk_widget_get_opacity (GTK_WIDGET (self.widget));
 }
 
-- (id)opacity:(double)opacity {
+- (void)setOpacity:(double)opacity {
 	gtk_widget_set_opacity (GTK_WIDGET (self.widget), opacity);
-	return self;
 }
 
 

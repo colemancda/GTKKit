@@ -24,18 +24,16 @@
 	return gtk_window_get_resizable (GTK_WINDOW (self.widget));
 }
 
-- (id)width:(int)width height:(int)height {
+- (void)width:(int)width height:(int)height {
 	gtk_window_resize (GTK_WINDOW (self.widget), width, height);
-	return self;
 }
 
 - (bool)modal {
 	return gtk_window_get_modal (GTK_WINDOW (self.widget));
 }
 
-- (id)modal:(bool)modal {
+- (void)setModal:(bool)modal {
 	gtk_window_set_modal (GTK_WINDOW (self.widget), modal);
-	return self;
 }
 
 - (of_point_t)position {
@@ -45,33 +43,28 @@
 	return of_point (x, y);
 }
 
-- (id)position:(of_point_t)position {
+- (void)setPosition:(of_point_t)position {
 	gtk_window_move (GTK_WINDOW (self.widget), position.x, position.y);
-	return self;
 }
 
-- (id)transientForWindow:(GTKWindow *)window {
+- (void)setTransientForWindow:(GTKWindow *)window {
 	gtk_window_set_transient_for (GTK_WINDOW (self.widget), GTK_WINDOW ([window widget]));
-	return self;
 }
 
-- (id)destroyWithParent:(bool)setting {
+- (void)setDestroyWithParent:(bool)setting {
 	gtk_window_set_destroy_with_parent (GTK_WINDOW (self.widget), setting);
-	return self;
 }
 
 - (bool)maximized {
 	return gtk_window_is_maximized (GTK_WINDOW (self.widget));
 }
 
-- (id)decorated:(bool)setting {
+- (void)setDecorated:(bool)setting {
 	gtk_window_set_decorated (GTK_WINDOW (self.widget), setting);
-	return self;
 }
 
-- (id)deletable:(bool)setting {
+- (void)setDeletable:(bool)setting {
 	gtk_window_set_deletable (GTK_WINDOW (self.widget), setting);
-	return self;
 }
 
 - (bool)active {

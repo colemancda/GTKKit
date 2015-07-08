@@ -13,9 +13,8 @@
 	return [NSString stringWithUTF8String: gtk_button_get_label (GTK_BUTTON (self.widget))];
 }
 
-- (id OF_NONNULL)reliefStyle:(GtkReliefStyle)relief {
+- (void)setReliefStyle:(GtkReliefStyle)relief {
 	gtk_button_set_relief (GTK_BUTTON (self.widget), relief);
-	return self;
 }
 
 - (GtkReliefStyle)reliefStyle {

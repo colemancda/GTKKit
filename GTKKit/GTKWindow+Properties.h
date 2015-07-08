@@ -7,27 +7,25 @@
 
 @property (assign) OFString *title;
 @property (assign) bool resizable;
+@property (assign) bool modal;
+@property (assign) of_point_t position;
 
-- (id)width:(int)width height:(int)height;
+@property (assign) GTKWindow *transientForWindow;
+- (GTKWindow *)transientForWindow UNAVAILABLE_ATTRIBUTE;
 
-- (bool)modal;
+@property (assign) bool destroyWithParent;
+- (bool)destroyWithParent UNAVAILABLE_ATTRIBUTE;
 
-- (id)modal:(bool)modal;
+@property (assign, readonly) bool maximized;
+- (bool)setMaximized UNAVAILABLE_ATTRIBUTE;
 
-- (of_point_t)position;
+@property (assign) bool decorated;
+- (bool)decorated UNAVAILABLE_ATTRIBUTE;
 
-- (id)position:(of_point_t)position;
+@property (assign) bool deletable;
+- (bool)deletable UNAVAILABLE_ATTRIBUTE;
 
-- (id)transientForWindow:(GTKWindow *)window;
-
-- (id)destroyWithParent:(bool)setting;
-
-- (bool)maximized;
-
-- (id)decorated:(bool)setting;
-
-- (id)deletable:(bool)setting;
-
-- (bool)active;
+@property (assign, readonly) bool active;
+- (bool)setActive UNAVAILABLE_ATTRIBUTE;
 
 @end
