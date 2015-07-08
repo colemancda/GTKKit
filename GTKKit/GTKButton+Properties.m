@@ -5,9 +5,8 @@
 
 @implementation GTKButton (Properties)
 
-- (id OF_NONNULL)label:(OFString * OF_NULLABLE)label {
+- (void)setLabel:(OFString * OF_NULLABLE)label {
 	gtk_button_set_label (GTK_BUTTON (self.widget), [label UTF8String]);
-	return self;
 }
 
 - (OFString * OF_NULLABLE)label {

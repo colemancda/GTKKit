@@ -22,18 +22,16 @@
   }
 }
 
-- (id)textVisible:(BOOL)visible {
+- (void)setTextVisible:(BOOL)visible {
   gtk_entry_set_visibility (GTK_ENTRY (self.widget), visible);
-  return self;
 }
 
 - (BOOL)textVisible {
   return gtk_entry_get_visibility (GTK_ENTRY (self.widget));
 }
 
-- (id)maximumLength:(int)max {
+- (void)setMaximumLength:(int)max {
   gtk_entry_set_max_length (GTK_ENTRY (self.widget), max);
-  return self;
 }
 
 - (int)maximumLength {

@@ -8,23 +8,20 @@
 	return gtk_orientable_get_orientation (GTK_ORIENTABLE (self.widget));
 }
 
-- (id)orientation:(GtkOrientation)orientation {
+- (void)setOrientation:(GtkOrientation)orientation {
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (self.widget), orientation);
-	return self;
 }
 
-- (id)columnsHomogeneous:(bool)setting {
+- (void)setColumnsHomogeneous:(bool)setting {
 	gtk_grid_set_column_homogeneous (GTK_GRID (self.widget), setting);
-	return self;
 }
 
 - (bool)columnsHomogeneous {
 	return gtk_grid_get_column_homogeneous (GTK_GRID (self.widget));
 }
 
-- (id)rowsHomogeneous:(bool)setting {
+- (void)setRowsHomogeneous:(bool)setting {
 	gtk_grid_set_row_homogeneous (GTK_GRID (self.widget), setting);
-	return self;
 }
 
 - (bool)rowsHomogeneous {
@@ -35,27 +32,24 @@
 	return gtk_grid_get_row_spacing (GTK_GRID (self.widget));
 }
 
-- (id)rowSpacing:(unsigned int)spacing {
+- (void)setRowSpacing:(unsigned int)spacing {
 	gtk_grid_set_row_spacing (GTK_GRID (self.widget), spacing);
-	return self;
 }
 
 - (unsigned int)columnSpacing {
 	return gtk_grid_get_column_spacing (GTK_GRID (self.widget));
 }
 
-- (id)columnSpacing:(unsigned int)spacing {
+- (void)setColumnSpacing:(unsigned int)spacing {
 	gtk_grid_set_column_spacing (GTK_GRID (self.widget), spacing);
-	return self;
 }
 
 - (int)baselineRow {
 	return gtk_grid_get_baseline_row (GTK_GRID (self.widget));
 }
 
-- (id)baselineRow:(int)row {
+- (void)setBaselineRow:(int)row {
 	gtk_grid_set_baseline_row (GTK_GRID (self.widget), row);
-	return self;
 }
 
 - (GtkBaselinePosition)baselinePositionForRow:(int)row {

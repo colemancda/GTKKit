@@ -11,7 +11,7 @@
 @interface GTKWidget : OFObject
 
 @property (nonnull, assign, getter=widget, setter=widget:) GtkWidget *widget;
-@property (nullable, assign, getter=destroyedCallback, setter=onDestroy:) GTKCallback destroyedCallback;
+@property (nullable, assign, getter=destroyedCallback, setter=onDestroy:) GTKCallback onDestroy;
 
 /**
  * Create a new widget.

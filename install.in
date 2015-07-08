@@ -21,3 +21,4 @@ mkdir -p @PREFIX@/include/GTKKit/Protocols
 cp GTKKit/*.h @PREFIX@/include/GTKKit/
 cp GTKKit/Protocols/*.h @PREFIX@/include/GTKKit/Protocols/
 cp GTKKit/libgtkkit.pc @PREFIX@/share/pkgconfig/
+echo "GTKKit installed!"

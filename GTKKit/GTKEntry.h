@@ -7,16 +7,12 @@
 }
 
 @property (assign) id stringValue;
+@property (assign) BOOL textVisible;
+@property (assign) int maximumLength;
 
-// - (id)stringValue;
+// - (id)maximumLength:(int)max;
 
-- (id)textVisible:(BOOL)visible;
-
-- (BOOL)textVisible;
-
-- (id)maximumLength:(int)max;
-
-- (int)maximumLength;
+// - (int)maximumLength;
 
 - (BOOL)hasFrame;
 

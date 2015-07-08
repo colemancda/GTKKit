@@ -2,6 +2,6 @@
 
 - (GtkOrientation)orientation;
 
-- (void)orientation:(GtkOrientation)orientation;
+- (void)setOrientation:(GtkOrientation)orientation;
 
 @end
