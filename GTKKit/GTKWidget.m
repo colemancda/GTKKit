@@ -20,7 +20,6 @@
 	if (self) {
 		[self createWidget];
 		g_signal_connect(GTK_WIDGET (self.widget), "destroy", G_CALLBACK (widgetDestroyed), (__bridge void*) self);
-		[self onDestroy: ^{}];
 	}
 	return self;
 }
@@ -32,6 +31,6 @@
 @end
 
 static void widgetDestroyed(GtkWidget *widget, GTKWidget *sender) {
-	GTKCallback callback = [sender destroyedCallback];
-	callback(sender);
+	if (sender.onDestroy)
+		sender.onDestroy(sender);
 }
