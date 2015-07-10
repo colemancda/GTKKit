@@ -15,6 +15,8 @@
 #import <GTKKit/GTKLabel.h>
 #import <GTKKit/GTKLabel+Properties.h>
 #import <GTKKit/GTKBin.h>
+#import <GTKKit/GTKExpander.h>
+#import <GTKKit/GTKExpander+Properties.h>
 #import <GTKKit/GTKButton.h>
 #import <GTKKit/GTKButton+Properties.h>
 #import <GTKKit/GTKWindow.h>
