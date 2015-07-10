@@ -4,11 +4,11 @@
 
 @implementation GTKLabel (Properties)
 
-- (NSString *)label {
-	return [NSString stringWithUTF8String: gtk_label_get_text (GTK_LABEL (self.widget))];
+- (OFString *)label {
+	return [OFString stringWithUTF8String: gtk_label_get_text (GTK_LABEL (self.widget))];
 }
 
-- (void)setLabel:(NSString *)label {
+- (void)setLabel:(OFString *)label {
 	gtk_label_set_text (GTK_LABEL (self.widget), [label UTF8String]);
 }
 
