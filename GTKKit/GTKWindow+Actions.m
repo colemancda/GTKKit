@@ -16,12 +16,26 @@
 }
 
 - (id)close {
-	gtk_window_close (GTK_WINDOW (self.widget));
+	if ( self.delegate != nil && [self.delegate respondsToSelector: @selector(windowShouldClose:)]) {
+	  if ( [self.delegate windowShouldClose:self] ) {
+	    if ([self.delegate respondsToSelector: @selector(windowWillClose:)]) {
+	      [self.delegate windowWillClose:self];
+	    }
+	    gtk_window_close (GTK_WINDOW (self.widget));
+	  }
+	}
 	return self;
 }
 
 - (id)minimize {
-	gtk_window_iconify (GTK_WINDOW (self.widget));
+	if ( self.delegate != nil && [self.delegate respondsToSelector: @selector(windowShouldMinimize:)]) {
+	  if ( [self.delegate windowShouldMinimize:self] ) {
+	    if ([self.delegate respondsToSelector: @selector(windowWillMinimize:)]) {
+	      [self.delegate windowWillMinimize:self];
+	    }
+		gtk_window_iconify (GTK_WINDOW (self.widget));
+	  }
+	}
 	return self;
 }
 
@@ -31,7 +45,14 @@
 }
 
 - (id)maximize {
-	gtk_window_maximize (GTK_WINDOW (self.widget));
+	if ( self.delegate != nil && [self.delegate respondsToSelector: @selector(windowShouldMaximize:)]) {
+	  if ( [self.delegate windowShouldMaximize:self] ) {
+	    if ([self.delegate respondsToSelector: @selector(windowWillMaximize:)]) {
+	      [self.delegate windowWillMaximize:self];
+	    }
+		gtk_window_maximize (GTK_WINDOW (self.widget));
+	  }
+	}
 	return self;
 }
 

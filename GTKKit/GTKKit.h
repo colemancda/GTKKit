@@ -24,3 +24,4 @@
 #import <GTKKit/GTKWindow+Properties.h>
 #import <GTKKit/GTKEntry.h>
 #import <GTKKit/Protocols/GTKButtonDelegate.h>
+#import <GTKKit/Protocols/GTKWindowDelegate.h>
