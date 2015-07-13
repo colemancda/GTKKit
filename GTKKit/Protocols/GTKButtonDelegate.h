@@ -1,6 +1,8 @@
 @class GTKButton;
 
-@protocol GTKButtonDelegate
+@protocol GTKButtonDelegate <OFObject>
+
+@optional
 
 -(void)buttonClicked:(GTKButton *)sender;
 
