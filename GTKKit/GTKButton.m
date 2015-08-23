@@ -2,6 +2,15 @@
 #import <gtk/gtk.h>
 #import "GTKButton.h"
 
+static void buttonClicked(GtkWidget *button, GTKButton *sender) {
+
+	if (sender.delegate)
+		[sender.delegate buttonClicked: sender];
+
+	if (sender.onClick)
+		sender.onClick(sender);
+}
+
 @implementation GTKButton
 
 - (id)createWidget {
@@ -16,12 +25,3 @@
 }
 
 @end
-
-static void buttonClicked(GtkWidget *button, GTKButton *sender) {
-
-	if (sender.delegate)
-		[sender.delegate buttonClicked: sender];
-		
-	if (sender.onClick)
-		sender.onClick(sender);
-}

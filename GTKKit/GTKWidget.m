@@ -3,6 +3,11 @@
 #import "GTKWidget.h"
 #import "typedefs.h"
 
+static void widgetDestroyed(GtkWidget *widget, GTKWidget *sender) {
+	if (sender.onDestroy)
+		sender.onDestroy(sender);
+}
+
 @implementation GTKWidget
 
 + (id)new {
@@ -29,8 +34,3 @@
 }
 
 @end
-
-static void widgetDestroyed(GtkWidget *widget, GTKWidget *sender) {
-	if (sender.onDestroy)
-		sender.onDestroy(sender);
-}

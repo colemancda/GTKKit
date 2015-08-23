@@ -33,5 +33,3 @@
 - (id OF_NONNULL)createWidget;
 
 @end
-
-static void widgetDestroyed(GtkWidget OF_NONNULL *widget, GTKWidget OF_NONNULL *sender);

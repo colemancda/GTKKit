@@ -10,5 +10,3 @@
 @property (nullable, unsafe_unretained) id<GTKButtonDelegate> delegate;
 
 @end
-
-static void buttonClicked(GtkWidget OF_NONNULL *button, GTKButton OF_NONNULL *sender);
