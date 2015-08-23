@@ -1,3 +1,3 @@
-SUBDIRS = GTKKit
+SUBDIRS = src
 
 include buildsys.mk
