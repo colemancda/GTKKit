@@ -1,5 +1,4 @@
 #import "typedefs.h"
-#import "GTKEnumerations.h"
 #import "GTKWidget.h"
 #import "GTKWidget+Actions.h"
 #import "GTKWidget+Callbacks.h"

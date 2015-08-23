@@ -34,6 +34,5 @@ INCLUDES := ${SRCS:.m=.h}
 
 include ../buildsys.mk
 
-CPPFLAGS += -IGTKEnumerations.d
 OBJCFLAGS += -fobjc-arc -fobjc-arc-exceptions
 LD = ${OBJC}
