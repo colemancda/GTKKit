@@ -5,13 +5,13 @@
 
 @implementation GTKWidget (Properties)
 
-- (void)setName:(NSString *)name {
+- (void)setName:(OFString *)name {
 	gtk_widget_set_name(GTK_WIDGET (self.widget), [name UTF8String]);
 }
 
 - (OFString *)name {
 	const char* widgetName = gtk_widget_get_name(GTK_WIDGET (self.widget));
-	return [NSString stringWithUTF8String: widgetName];
+	return [OFString stringWithUTF8String: widgetName];
 }
 
 - (bool)isFocus {

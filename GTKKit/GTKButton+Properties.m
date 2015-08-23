@@ -10,7 +10,7 @@
 }
 
 - (OFString * OF_NULLABLE)label {
-	return [NSString stringWithUTF8String: gtk_button_get_label (GTK_BUTTON (self.widget))];
+	return [OFString stringWithUTF8String: gtk_button_get_label (GTK_BUTTON (self.widget))];
 }
 
 - (void)setReliefStyle:(GtkReliefStyle)relief {
