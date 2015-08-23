@@ -5,7 +5,7 @@
 @implementation GTKFrame (Properties)
 
 - (OFString *)label {
-	return [NSString stringWithUTF8String: gtk_frame_get_label (GTK_FRAME (self.widget))];
+	return @(gtk_frame_get_label (GTK_FRAME (self.widget)));
 }
 
 - (void)setLabel:(OFString *)label {

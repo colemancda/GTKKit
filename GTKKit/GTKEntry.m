@@ -12,7 +12,7 @@
 }
 
 - (id)stringValue {
-  return [NSString stringWithUTF8String: gtk_entry_get_text (GTK_ENTRY (self.widget))];
+  return @(gtk_entry_get_text (GTK_ENTRY (self.widget)));
 }
 
 - (void)setStringValue:(id)text {
