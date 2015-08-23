@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKLabel.h>
+#import "GTKLabel.h"
 
 @implementation GTKLabel
 

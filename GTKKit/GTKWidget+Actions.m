@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKWidget.h>
-#import <GTKKit/GTKWidget+Actions.h>
+#import "GTKWidget.h"
+#import "GTKWidget+Actions.h"
 
 @implementation GTKWidget (Actions)
 

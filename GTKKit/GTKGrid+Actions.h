@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKGrid.h>
+#import "GTKGrid.h"
 
 @interface GTKGrid (Actions)
 

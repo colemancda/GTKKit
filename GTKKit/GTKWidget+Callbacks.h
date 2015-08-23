@@ -1,4 +1,4 @@
-#import <GTKKit/GTKWidget.h>
+#import "GTKWidget.h"
 
 @interface GTKWidget (Callbacks)
 

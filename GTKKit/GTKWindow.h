@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKBin.h>
-#import <GTKKit/Protocols/GTKWindowDelegate.h>
+#import "GTKBin.h"
+#import "Protocols/GTKWindowDelegate.h"
 
 @interface GTKWindow : GTKBin
 

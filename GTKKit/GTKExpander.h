@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKBin.h>
-#import <GTKKit/typedefs.h>
+#import "GTKBin.h"
+#import "typedefs.h"
 
 @interface GTKExpander : GTKBin
 

@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKButton.h>
-#import <GTKKit/GTKButton+Properties.h>
+#import "GTKButton.h"
+#import "GTKButton+Properties.h"
 
 @implementation GTKButton (Properties)
 

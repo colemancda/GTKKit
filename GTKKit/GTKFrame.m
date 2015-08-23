@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKFrame.h>
+#import "GTKFrame.h"
 
 @implementation GTKFrame
 

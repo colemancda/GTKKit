@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKWidget+Properties.h>
-#import <GTKKit/GTKWidget.h>
+#import "GTKWidget+Properties.h"
+#import "GTKWidget.h"
 
 @implementation GTKWidget (Properties)
 

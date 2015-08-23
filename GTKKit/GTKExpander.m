@@ -1,4 +1,4 @@
-#import <GTKKit/GTKExpander.h>
+#import "GTKExpander.h"
 
 @implementation GTKExpander
 

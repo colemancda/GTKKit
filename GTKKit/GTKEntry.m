@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKEntry.h>
+#import "GTKEntry.h"
 
 @implementation GTKEntry
 

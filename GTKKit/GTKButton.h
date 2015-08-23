@@ -1,8 +1,8 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKBin.h>
-#import <GTKKit/typedefs.h>
-#import <GTKKit/Protocols/GTKButtonDelegate.h>
+#import "GTKBin.h"
+#import "typedefs.h"
+#import "Protocols/GTKButtonDelegate.h"
 
 @interface GTKButton : GTKBin
 

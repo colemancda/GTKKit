@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKButton.h>
+#import "GTKButton.h"
 
 @interface GTKButton (Properties)
 

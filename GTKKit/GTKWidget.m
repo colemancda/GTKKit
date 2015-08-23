@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKWidget.h>
-#import <GTKKit/typedefs.h>
+#import "GTKWidget.h"
+#import "typedefs.h"
 
 @implementation GTKWidget
 

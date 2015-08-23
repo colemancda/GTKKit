@@ -1,4 +1,4 @@
-#import <GTKKit/GTKExpander+Properties.h>
+#import "GTKExpander+Properties.h"
 
 @implementation GTKExpander (Properties)
 

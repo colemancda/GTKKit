@@ -1,8 +1,8 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKContainer.h>
-#import <GTKKit/GTKWindow.h>
-#import <GTKKit/GTKWindow+Actions.h>
+#import "GTKContainer.h"
+#import "GTKWindow.h"
+#import "GTKWindow+Actions.h"
 
 @implementation GTKWindow (Actions)
 

@@ -1,7 +1,7 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKFrame.h>
-#import <GTKKit/GTKEnumerations.h>
+#import "GTKFrame.h"
+#import "GTKEnumerations.h"
 
 @interface GTKFrame (Properties)
 

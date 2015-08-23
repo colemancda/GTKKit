@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKContainer.h>
+#import "GTKContainer.h"
 
 @interface GTKGrid : GTKContainer {
 

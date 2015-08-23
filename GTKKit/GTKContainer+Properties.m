@@ -1,6 +1,6 @@
 #import <ObjFW/ObjFW.h>
 #import <gtk/gtk.h>
-#import <GTKKit/GTKContainer+Properties.h>
+#import "GTKContainer+Properties.h"
 
 @implementation GTKContainer (Properties)
 
