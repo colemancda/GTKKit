@@ -11,4 +11,4 @@
 
 @end
 
-static void buttonClicked(GtkWidget OF_NONNULL *button, GTKButton OF_NONNULL *sender);
+static void buttonClicked(GtkWidget* OF_NONNULL button, GTKButton* OF_NONNULL sender);

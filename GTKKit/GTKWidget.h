@@ -34,4 +34,4 @@
 
 @end
 
-static void widgetDestroyed(GtkWidget OF_NONNULL *widget, GTKWidget OF_NONNULL *sender);
+static void widgetDestroyed(GtkWidget* OF_NONNULL widget, GTKWidget* OF_NONNULL sender);
