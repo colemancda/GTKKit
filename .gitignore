@@ -1,0 +1,13 @@
+*.dll
+*.dylib
+*.o
+*.so
+*~
+.deps
+aclocal.m4
+autom4te.cache
+buildsys.mk
+config.log
+config.status
+configure
+extra.mk
