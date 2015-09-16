@@ -1,3 +1,0 @@
-include_rules
-
-: foreach *.in |> tup varsed %f %o && chmod +x %o |> %B.sh
