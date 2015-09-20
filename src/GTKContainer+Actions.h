@@ -1,6 +1,10 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer.h"
+
+OF_ASSUME_NONNULL_BEGIN
 
 /**
  * \category GTKContainer
@@ -12,12 +16,13 @@
  * Adds a GTKWidget to the container as a child widget.
  *
  * @param childWidget a GTKWidget to add to the container.
- * @returns self
  */
-- (id)addWidget:(GTKWidget *)childWidget;
+- (void)addWidget: (GTKWidget*)childWidget;
 
-- (id)removeWidget:(GTKWidget *)childWidget;
+- (void)removeWidget: (GTKWidget*)childWidget;
 
-- (id)addAll:(NSArray *)childWidgets;
+- (void)addAll: (OFArray*)childWidgets;
 
 @end
+
+OF_ASSUME_NONNULL_END

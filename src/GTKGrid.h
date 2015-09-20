@@ -1,9 +1,12 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer.h"
 
-@interface GTKGrid : GTKContainer {
+OF_ASSUME_NONNULL_BEGIN
 
-}
-
+@interface GTKGrid: GTKContainer
 @end
+
+OF_ASSUME_NONNULL_END

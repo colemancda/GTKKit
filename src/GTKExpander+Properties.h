@@ -1,12 +1,14 @@
 #import "GTKExpander.h"
 
+OF_ASSUME_NONNULL_BEGIN
+
 @interface GTKExpander (Properties)
-
 @property (assign) OFString *label;
-@property (assign) bool expanded;
-@property (assign) int spacing;
-@property (assign) bool resizeToplevel;
+@property bool expanded;
+@property int spacing;
+@property bool resizeToplevel;
 
-+ (id)expanderWithLabel:(OFString *)label;
-
++ (instancetype)expanderWithLabel: (OFString*)label;
 @end
+
+OF_ASSUME_NONNULL_END

@@ -1,26 +1,22 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer.h"
 #import "GTKWindow.h"
 
+OF_ASSUME_NONNULL_BEGIN
+
 @interface GTKWindow (Actions)
-
-- (id)present;
-
+- (void)present;
 - (bool)activateDefaultWidget;
-
-- (id)close;
-
-- (id)minimize;
-
-- (id)unminimize;
-
-- (id)maximize;
-
-- (id)unmaximize;
-
-- (id)fullscreen;
-
-- (id)unfullscreen;
-
+- (void)close;
+- (void)minimize;
+- (void)unminimize;
+- (void)maximize;
+- (void)unmaximize;
+- (void)fullscreen;
+- (void)unfullscreen;
 @end
+
+OF_ASSUME_NONNULL_END
