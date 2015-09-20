@@ -67,6 +67,10 @@
 	gtk_window_set_deletable (GTK_WINDOW (self.widget), setting);
 }
 
+- (bool)deletable {
+	return gtk_window_get_deletable (GTK_WINDOW (self.widget));
+}
+
 - (bool)active {
 	return gtk_window_is_active (GTK_WINDOW (self.widget));
 }
