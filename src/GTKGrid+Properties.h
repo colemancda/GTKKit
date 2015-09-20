@@ -18,3 +18,7 @@ OF_ASSUME_NONNULL_BEGIN
 - (id)baselinePosition: (GtkBaselinePosition)position
 		forRow: (int)row;
 @end
+
+
+
+OF_ASSUME_NONNULL_END
