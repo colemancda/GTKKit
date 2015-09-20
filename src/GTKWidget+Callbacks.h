@@ -1,5 +1,8 @@
 #import "GTKWidget.h"
 
-@interface GTKWidget (Callbacks)
+OF_ASSUME_NONNULL_BEGIN
 
+@interface GTKWidget (Callbacks)
 @end
+
+OF_ASSUME_NONNULL_END

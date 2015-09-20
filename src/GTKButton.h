@@ -1,12 +1,17 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKBin.h"
 #import "typedefs.h"
 #import "Protocols/GTKButtonDelegate.h"
 
-@interface GTKButton : GTKBin
+OF_ASSUME_NONNULL_BEGIN
 
-@property (copy, nonnull) GTKCallback onClick;
-@property (nullable, unsafe_unretained) id<GTKButtonDelegate> delegate;
-
+@interface GTKButton: GTKBin
+@property (copy) GTKCallback onClick;
+@property OF_NULLABLE_PROPERTY (unsafe_unretained)
+    id <GTKButtonDelegate> delegate;
 @end
+
+OF_ASSUME_NONNULL_END

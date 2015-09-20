@@ -1,15 +1,19 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKBin.h"
 
-@interface GTKComboBox : GTKBin {
+OF_ASSUME_NONNULL_BEGIN
 
-}
-
-- (void)appendString:(OFString *)string withIdentifierString:(OFString *)id;
-
-- (void)prependString:(OFString *)string withIdentifierString:(OFString *)id;
-
-- (void)insertString:(OFString *)string withIdentifierString:(OFString *)id atPosition:(int)position;
-
+@interface GTKComboBox: GTKBin
+- (void)    appendString: (OFString*)string
+    withIdentifierString: (OFString*)ID;
+- (void)   prependString: (OFString*)string
+    withIdentifierString: (OFString*)ID;
+- (void)    insertString: (OFString*)string
+    withIdentifierString: (OFString*)ID
+	      atPosition: (int)position;
 @end
+
+OF_ASSUME_NONNULL_END

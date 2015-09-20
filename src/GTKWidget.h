@@ -2,23 +2,25 @@
 #import <gtk/gtk.h>
 #import "typedefs.h"
 
-/** \brief Widget parent class.
+OF_ASSUME_NONNULL_BEGIN
+
+/**
+ * \brief Widget parent class.
  *
  * GTKWidget is the parent class for all the wrapper classes found in GTKKit.
  * It is not to be instantiated itself, but the methods it implements are
  * critical for all other UI* classes.
  */
-@interface GTKWidget : OFObject
-
-@property (nonnull, assign, getter=widget, setter=widget:) GtkWidget *widget;
-@property (nullable, assign, unsafe_unretained) GTKCallback onDestroy;
+@interface GTKWidget: OFObject
+@property (assign, getter=widget, setter=widget:) GtkWidget *widget;
+@property OF_NULLABLE_PROPERTY (assign, unsafe_unretained) GTKCallback onDestroy;
 
 /**
  * Create a new widget.
  *
  * @returns an initialized widget object.
  */
-+ (id OF_NONNULL)new;
++ (instancetype)new;
 
 /**
  * Create a new widget object using a raw C GtkWidget.
@@ -26,10 +28,12 @@
  * @param w the GtkWidget to wrap in a widget instance.
  * @returns an initialized widget object.
  */
-+ (id OF_NONNULL)widgetFromGtkWidget:(GtkWidget * OF_NONNULL)w;
++ (instancetype)widgetFromGtkWidget: (GtkWidget*)w;
 
-- (id OF_NONNULL)init;
+- (instancetype)init;
 
-- (id OF_NONNULL)createWidget;
+- (instancetype)createWidget;
 
 @end
+
+OF_ASSUME_NONNULL_END

@@ -1,24 +1,23 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer+Actions.h"
 
 @implementation GTKContainer (Actions)
-
-- (id)addWidget:(GTKWidget *)childWidget {
-	gtk_container_add (GTK_CONTAINER (self.widget), [childWidget widget]);
-	return self;
+- (void)addWidget: (GTKWidget*)childWidget
+{
+	gtk_container_add(GTK_CONTAINER(self.widget), [childWidget widget]);
 }
 
-- (id)removeWidget:(GTKWidget *)childWidget {
-	gtk_container_remove (GTK_CONTAINER (self.widget), [childWidget widget]);
-	return self;
+- (void)removeWidget: (GTKWidget*)childWidget
+{
+	gtk_container_remove(GTK_CONTAINER(self.widget), [childWidget widget]);
 }
 
-- (id)addAll:(NSArray *)childWidgets {
-	for (id childWidget in childWidgets) {
+- (void)addAll: (OFArray*)childWidgets
+{
+	for (id childWidget in childWidgets)
 		[self addWidget: childWidget];
-	}
-	return self;
 }
-
 @end

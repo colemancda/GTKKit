@@ -1,9 +1,13 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer.h"
 
-@interface GTKBin : GTKContainer
+OF_ASSUME_NONNULL_BEGIN
 
-- (GTKWidget *)childWidget;
-
+@interface GTKBin: GTKContainer
+- (GTKWidget*)childWidget;
 @end
+
+OF_ASSUME_NONNULL_END

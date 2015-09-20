@@ -1,31 +1,23 @@
 #import <ObjFW/ObjFW.h>
+
 #import <gtk/gtk.h>
+
 #import "GTKContainer.h"
 #import "GTKWindow.h"
 
+OF_ASSUME_NONNULL_BEGIN
+
 @interface GTKWindow (Properties)
-
 @property (assign) OFString *title;
-@property (assign) bool resizable;
-@property (assign) bool modal;
-@property (assign) of_point_t position;
-
+@property bool resizable;
+@property bool modal;
+@property of_point_t position;
 @property (assign) GTKWindow *transientForWindow;
-- (GTKWindow *)transientForWindow UNAVAILABLE_ATTRIBUTE;
-
-@property (assign) bool destroyWithParent;
-- (bool)destroyWithParent UNAVAILABLE_ATTRIBUTE;
-
-@property (assign, readonly) bool maximized;
-- (bool)setMaximized UNAVAILABLE_ATTRIBUTE;
-
-@property (assign) bool decorated;
-- (bool)decorated UNAVAILABLE_ATTRIBUTE;
-
-@property (assign) bool deletable;
-- (bool)deletable UNAVAILABLE_ATTRIBUTE;
-
-@property (assign, readonly) bool active;
-- (bool)setActive UNAVAILABLE_ATTRIBUTE;
-
+@property bool destroyWithParent;
+@property (readonly) bool maximized;
+@property bool decorated;
+@property bool deletable;
+@property (readonly) bool active;
 @end
+
+OF_ASSUME_NONNULL_END
