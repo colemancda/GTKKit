@@ -12,7 +12,7 @@ OF_ASSUME_NONNULL_BEGIN
  * critical for all other UI* classes.
  */
 @interface GTKWidget: OFObject
-@property (assign, getter=widget, setter=widget:) GtkWidget *widget;
+@property (assign) GtkWidget *widget;
 @property OF_NULLABLE_PROPERTY (assign, unsafe_unretained) GTKCallback onDestroy;
 
 /**

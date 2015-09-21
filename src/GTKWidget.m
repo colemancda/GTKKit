@@ -16,7 +16,7 @@ static void widgetDestroyed(GtkWidget *widget, GTKWidget *sender) {
 
 + (id)widgetFromGtkWidget:(GtkWidget *)w {
 	GTKWidget *newWidget = [self new];
-	[newWidget widget: w];
+	newWidget.widget = w;
 	return newWidget;
 }
 
