@@ -8,7 +8,7 @@ OF_ASSUME_NONNULL_BEGIN
 
 @interface GTKButton (Properties)
 @property (copy) OFString *label;
-@property (assign) GtkReliefStyle reliefStyle;
+@property GtkReliefStyle reliefStyle;
 @end
 
 OF_ASSUME_NONNULL_END

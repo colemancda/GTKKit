@@ -8,9 +8,9 @@ OF_ASSUME_NONNULL_BEGIN
 
 @interface GTKWidget (Properties)
 @property (copy) OFString *name;
-@property (assign) bool sensitive;
+@property bool sensitive;
 @property (readonly) bool effectiveSensitivity;
-@property (assign) double opacity;
+@property double opacity;
 @property (readonly) bool isFocus;
 @end
 
