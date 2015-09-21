@@ -2,6 +2,12 @@
 #import <gtk/gtk.h>
 #import "GTKWindow.h"
 
+static gboolean window_state_event_dispatch(GtkWidget *window, GdkEventWindowState *event, GTKWindow *sender) {
+	// Eventually, this callback will determine what kind of event led to a window-state-event
+	// being fired, and call the appropriate code to handle it.
+	return TRUE;
+}
+
 @implementation GTKWindow
 
 @synthesize defaultSize=_defaultSize;
@@ -9,6 +15,12 @@
 
 - (id)createWidget {
 	self.widget = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	return self;
+}
+
+- (id)init {
+	self = [super init];
+	g_signal_connect(G_OBJECT (self.widget), "window-state-event", G_CALLBACK (window_state_event_dispatch), (__bridge void*) self);
 	return self;
 }
 
