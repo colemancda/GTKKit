@@ -51,6 +51,11 @@
 	gtk_window_set_transient_for (GTK_WINDOW (self.widget), GTK_WINDOW ([window widget]));
 }
 
+- (GTKWindow *)transientForWindow {
+	return [GTKWindow widgetFromGtkWidget:
+		GTK_WIDGET (gtk_window_get_transient_for (GTK_WINDOW (self.widget)))];
+}
+
 - (void)setDestroyWithParent:(bool)setting {
 	gtk_window_set_destroy_with_parent (GTK_WINDOW (self.widget), setting);
 }

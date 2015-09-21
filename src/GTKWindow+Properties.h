@@ -12,7 +12,7 @@ OF_ASSUME_NONNULL_BEGIN
 @property (assign) bool resizable;
 @property (assign) bool modal;
 @property (assign) of_point_t position;
-@property (assign) GTKWindow *transientForWindow;
+@property (copy) GTKWindow *transientForWindow;
 @property (assign) bool destroyWithParent;
 @property (readonly) bool maximized;
 @property (assign) bool decorated;
