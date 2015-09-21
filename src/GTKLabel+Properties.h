@@ -8,16 +8,16 @@ OF_ASSUME_NONNULL_BEGIN
 
 @interface GTKLabel (Properties)
 @property (assign) OFString *label;
-@property float xAlign;
-@property float yAlign;
-@property GtkJustification justify;
-@property PangoEllipsizeMode ellipsizeMode;
-@property int desiredWidthInCharacters;
-@property bool wrap;
-@property PangoWrapMode lineWrapMode;
-@property bool selectable;
-@property bool singleLineMode;
-@property double angle;
+@property (assign) float xAlign;
+@property (assign) float yAlign;
+@property (assign) GtkJustification justify;
+@property (assign) PangoEllipsizeMode ellipsizeMode;
+@property (assign) int desiredWidthInCharacters;
+@property (assign) bool wrap;
+@property (assign) PangoWrapMode lineWrapMode;
+@property (assign) bool selectable;
+@property (assign) bool singleLineMode;
+@property (assign) double angle;
 @end
 
 OF_ASSUME_NONNULL_END

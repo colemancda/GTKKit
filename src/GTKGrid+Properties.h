@@ -7,12 +7,12 @@
 OF_ASSUME_NONNULL_BEGIN
 
 @interface GTKGrid (Properties)
-@property GtkOrientation orientation;
-@property bool columnsHomogeneous;
-@property bool rowsHomogeneous;
-@property unsigned int rowSpacing;
-@property unsigned int columnsSpacing;
-@property int baselineRow;
+@property (assign) GtkOrientation orientation;
+@property (assign) bool columnsHomogeneous;
+@property (assign) bool rowsHomogeneous;
+@property (assign) unsigned int rowSpacing;
+@property (assign) unsigned int columnsSpacing;
+@property (assign) int baselineRow;
 
 - (GtkBaselinePosition)baselinePositionForRow: (int)row;
 - (id)baselinePosition: (GtkBaselinePosition)position

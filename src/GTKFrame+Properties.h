@@ -7,10 +7,10 @@
 OF_ASSUME_NONNULL_BEGIN
 
 @interface GTKFrame (Properties)
-@property (assign) OFString *label;
+@property (copy) OFString *label;
 @property (strong) GTKWidget *labelWidget;
-@property float xAlign;
-@property float yAlign;
+@property (assign) float xAlign;
+@property (assign) float yAlign;
 @end
 
 OF_ASSUME_NONNULL_END
